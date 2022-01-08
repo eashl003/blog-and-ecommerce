@@ -3,6 +3,7 @@ import Head from "next/head"
 import Layout from "../components/Layout"
 import { getCategories } from "../utils/api"
 import "../styles/index.css"
+import "../components/css/Header.css"
 
 const MyApp = ({ Component, pageProps }) => {
   return (
