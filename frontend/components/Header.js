@@ -1,7 +1,9 @@
 import Link from "next/link"
 import NextImage from "./Image" 
+import { getCategories, getCategory } from "../utils/api"
+import CategoryButtons from "./CategoryButtons"
  
-const Header = () => {
+const Header = ({ categories = [] }) => {
   return ( 
     <nav id="navbar" class="bg-gray-800">
       <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -25,13 +27,22 @@ const Header = () => {
       </div>
       <div class="dropdown">
         <Link href="/">Shop</Link>
-        <div class="dropdown-content">
-          <a id="dropdown-link" href="#">Link 1</a><br></br>
-          <a id="dropdown-link" href="#">Link 2</a><br></br>
-          <a id="dropdown-link" href="#">Link 3</a><br></br>
-        </div>
+        <ul class="dropdown-content">
+        {categories.map((_category) => {
+          return (
+            <li key={_category.id}>
+               <Link href={`/categories/${_category.slug}`} >
+                <a id="dropdown-link" >
+                  {_category.name}
+                </a>
+                
+            </Link>
+            </li>
+          )
+          })}
+        </ul>
       </div>
-      
+         
       </div>
     </div>
     </nav>

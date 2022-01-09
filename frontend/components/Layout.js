@@ -1,3 +1,4 @@
+
 import CategoryButtons from "./CategoryButtons"
 import Footer from "./Footer"
 import Header from "./Header"
@@ -6,7 +7,7 @@ const Layout = ({ children, categories }) => {
   return (
     <div className="flex justify-center bg-gray-200">
       <div className="flex flex-col min-h-screen w-full">
-        <Header />
+        <Header categories={categories} />
         <CategoryButtons categories={categories} />
         <div className="flex-grow">{children}</div>
         <Footer />
