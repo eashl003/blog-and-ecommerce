@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "blog_categories",
+  "collectionName": "blogs",
   "info": {
     "name": "Blog",
     "description": ""
@@ -12,16 +12,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
     },
     "slug": {
-      "type": "uid",
-      "targetField": "Name"
+      "type": "uid"
     },
     "articles": {
-      "via": "blog",
-      "collection": "article"
+      "via": "blogs",
+      "collection": "article",
+      "dominant": true
     }
   }
 }

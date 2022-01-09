@@ -7,8 +7,7 @@ import CategoryButtons from "../components/CategoryButtons"
 
 const HomePage = ({ products , categories}) => {
   return (
-    <div>
-      <title>Test</title>
+    <div> 
       <CategoryButtons categories={categories} />
       <ProductsList products={products} />
     </div>

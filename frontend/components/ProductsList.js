@@ -6,8 +6,7 @@ const ProductsList = ({ products, categories }) => {
   return (
     <div className="flex justify-center bg-gray-200">
      <div className="max-w-screen-lg flex flex-col min-h-screen w-full">
-     <CategoryButtons categories={categories} />
-     <h1>test</h1>
+     <CategoryButtons categories={categories} /> 
       <div className="m-6 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-10 mt-8">
         {products.map((_product) => (
           <div

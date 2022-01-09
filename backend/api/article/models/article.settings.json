@@ -12,18 +12,17 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Description": {
+    "description": {
       "type": "text"
     },
-    "Content": {
+    "content": {
       "type": "richtext"
     },
     "slug": {
-      "type": "uid",
-      "targetField": "Title"
+      "type": "uid"
     },
     "Image": {
       "model": "file",
@@ -37,13 +36,13 @@
       "required": false,
       "pluginOptions": {}
     },
-    "blog": {
-      "model": "blog-category",
-      "via": "articles"
-    },
     "author": {
       "via": "articles",
       "model": "writer"
+    },
+    "blogs": {
+      "via": "articles",
+      "collection": "blog"
     }
   }
 }

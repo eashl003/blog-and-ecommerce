@@ -2,6 +2,7 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import ArticlesList from "../../components/ArticlesList"
 import { getCategories, getCategory } from "../../utils/api"
+import { getBlogs, getBlog } from "../../utils/api"
 
 const BlogPage = ({ blog }) => {
   const router = useRouter()
@@ -22,7 +23,7 @@ const BlogPage = ({ blog }) => {
 export default BlogPage
 
 export async function getStaticProps({ params }) {
-  const blog = await getCategory(params.slug)
+  const blog = await getBlog(params.slug)
   return { props: { blog } }
 }
 
