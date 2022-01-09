@@ -1,15 +1,12 @@
-import Head from "next/head"
+
 import ProductsList from "../components/ProductsList"
 import { getProducts } from "../utils/api"
-import { getCategories } from "../utils/api"
-import CategoryButtons from "../components/CategoryButtons"
 
 
-const HomePage = ({ products , categories}) => {
+const ShopPage = ({ products }) => {
   return (
     <div>
-      <title>Test</title>
-      <CategoryButtons categories={categories} />
+      <title>Test</title> 
       <ProductsList products={products} />
     </div>
   )
@@ -20,4 +17,4 @@ export async function getStaticProps() {
   return { props: { products } }
 }
 
-export default HomePage
+export default ShopPage
