@@ -51,3 +51,9 @@ export async function getArticle(slug) {
   const articles = await fetchAPI(`/articles?slug=${slug}`);
   return articles?.[0];
 }
+
+export async function getAbout() {
+  const about = await fetchAPI("/about");
+  return about;
+}
+ 

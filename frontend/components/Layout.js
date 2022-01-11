@@ -7,7 +7,7 @@ const Layout = ({ children, categories, blogs }) => {
   return (
     <div className="flex justify-center bg-gray-200">
       <div className="flex flex-col min-h-screen w-full">
-        <Header categories={categories} blogs={blogs} />
+        <Header blogs={blogs} categories={categories}  />
         
         <div className="flex-grow">{children}</div>
         <Footer />

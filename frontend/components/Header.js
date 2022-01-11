@@ -17,7 +17,20 @@ const Header = ({ categories = [], blogs = [] }) => {
       </button>
       <div id="blog-link"  class="dropdown">
         <Link href="/blog">Blog</Link>
-       
+       {/* <ul class="dropdown-content">
+        {blogs.map((_blog) => {
+          return (
+            <li key={_blog.id}>
+               <Link href={`/blogs/${_blog.slug}`} >
+                <a id="dropdown-link" >
+                  {_blog.name}
+                </a>
+                
+            </Link>
+            </li>
+          )
+          })}
+        </ul> */}
       </div>
       <div id="shop-link" class="dropdown">
         <Link href="/shop">Shop</Link>
@@ -35,7 +48,9 @@ const Header = ({ categories = [], blogs = [] }) => {
           )
           })}
         </ul>
+         
       </div>
+      <div id="shop-link" ><a href="/about">About</a></div>
          
       </div>
     </div>

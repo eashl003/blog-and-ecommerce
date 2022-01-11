@@ -2,8 +2,9 @@
 import ArticlesList from "../components/ArticlesList"
 import { getArticles } from "../utils/api"
 import CategoryButtons from "../components/CategoryButtons"
+import { getBlogs } from "../utils/api"
 
-const BlogPage = ({ articles }) => {
+const BlogPage = ({ articles, blogs }) => {
   return (
     <div> Blog page
       <ArticlesList articles={articles} />
