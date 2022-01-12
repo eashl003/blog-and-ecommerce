@@ -17,7 +17,7 @@ const Header = ({ categories = [], blogs = [] }) => {
       </button>
       <div id="blog-link"  class="dropdown">
         <Link href="/blog">Blog</Link>
-       {/* <ul class="dropdown-content">
+        {/*<ul class="dropdown-content">
         {blogs.map((_blog) => {
           return (
             <li key={_blog.id}>

@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import { getBlogs, getCategories } from "../utils/api"
 import "../styles/index.css"
 import "../components/css/Header.css"
+import axios from "axios";
 
 const MyApp = ({ Component, pageProps }) => {
   return (

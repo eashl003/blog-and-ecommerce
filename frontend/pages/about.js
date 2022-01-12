@@ -1,21 +1,20 @@
+import { getAbout } from "../utils/api";
 
 
 
 const About = ({about}) => {
     return (
-      <div>test about {about.title}</div>
+      <div> {about.title}</div>
     )
 }
   
 export default About;
 
 export async function getStaticProps() {
-  const aboutRes = await axios.get("http://localhost:1337/about");
+  const about = await getAbout()
 
   return {
-    props: {
-      about: aboutRes.data
-    },
+    props: { about },
   };
 }
   
